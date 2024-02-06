@@ -1,16 +1,93 @@
+@font-face {
+  font-family: 'MainFont';
+  src: url(/font.ttf);
+}
+
+body {
+  margin: 0;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backdrop-filter: brightness(0.5);
+}
+
+.haut {
+  display: flex;
+  align-items: center;
+}
+
+.haut h1 {
+  margin-right: 10vh;
+  font-size: 50px;
+  animation: 1.5s ease-out 0s 1 apearAnimation;
+  font-family: 'MainFont';
+  color: #B6935F;                                               
+}
+
+.haut h1 span {
+  font-size: 70px;
+}
+
 .radhan {
   margin-right: 10vh;
   animation: 1.5s ease-out 0s 1 upImage;
-  transform: rotateY(3.142rad);
+  filter: drop-shadow(-18px 15px 23px #000000);
+}
+
+header {
+  height: 100vh;
+}
+
+main {
+  background-color: rgb(78, 71, 63);
+}
+
+.card {
+  display: flex;
+  width: 350px;
+  border-radius: 30px;
+  /* padding: 20px; */
+  border: solid 2px rgb(48, 48, 48);
+}
+
+.card .text {
+  width: 50%;
+}
+
+.card Image {
+  width: 50%;
+  transform: translate(0, 0);
+  transition: .5s;
+
+}
+
+.card:hover {
+  background-color: rgb(90, 82, 73);
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  transition: .5s;
 }
 
 @keyframes upImage {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(10%);
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apearAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
